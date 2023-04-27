@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg2</title>
+
+    <style>
+        img {
+            width: 300px;
+            margin-right: 50px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <svg width="100" height="100">
+        <defs>
+            <filter id="jjj">
+                <feDropShadow dx="0.5" dy="0.5" stdDeviation="5" flood-color="blue" />
+            </filter>
+
+            <filter id="fff">
+                <feMorphology operator="erode" radius="3" />
+            </filter>
+
+            <filter id="yyy">
+                <feColorMatrix type="luminanceToAlpha"  />
+            </filter>
+        </defs>
+    </svg>
+
+    <img src="/images-s2/lllll.png" alt="clipart of woman 1" style="filter:url(#jjj);">
+    <img src="/images-s2/lllll.png" alt="clipart of woman 2" style="filter:url(#fff)">
+    <img src="/images-s2/lllll.png" alt="clipart of woman 3" style="filter:url(#yyy)">
+</body>
+
+</html>
